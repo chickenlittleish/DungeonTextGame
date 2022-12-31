@@ -26,6 +26,3 @@ if __name__ == "__main__":
         if statue_choice == "right":
             print("You walk over to the right statue.")
     sys.exit()
-
-
-    =
