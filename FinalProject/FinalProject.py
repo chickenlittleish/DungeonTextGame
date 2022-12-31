@@ -1,12 +1,19 @@
 import sys
 
-
 if __name__ == "__main__":
-    print("what's your name?")
+    print("You wake up in a barely lit room. There is a small chill in the room.")
+    print("As you stand up you see that to your left, there were 2 huge pure white doors that shined golden that felt somewhat heavenly and divine. To the left of the doors was a tall statue of an angel, her eyes covered in a bandage. It's wings made it seem like it was flying as it held scale in it's right hand up and high and in its left hand, a sword held near her chest.")
+    print("To your right, there were 2 huge pure black doors that shined red that felt ominous and demonic, the opposite of the last one. To the left of the doors was a statue of an angel on her knees. Her eyes were bleeding blood as she held the hilt of a sword pierced through her chest.")
+    print("A message appears infront of you hovering that says: What is thy name, one who dares to try to escape their eternal prison?")
+    Winners = ["Deez Nuts","Your Mom","Why Should I Tell You?","I Gotta Piss","Saif","Piss Master 14 the 5th Lord of Bathania"]
+    Losers = ["Matthew","Zola","Brett","Declan","David","Sasha","Leen","Saif Sucks","Saif is Cringe","Not Sasha","Saif is Rubbish","Declan Lynch"]
     name = input()
-    print("You wake up in a dark room. You feel cold and out of a sudden, torches around the room light up.")
-    print("You see a pure white door to your left with an angel holding a scale in its left arm high above its head and its other hand holding a sword.")
-    print("To your right, you see a pure black door with a pure black angel with blood coming out of its eyes with its hands holding a sword going through its chest.")
+    if name in Winners:
+        print("Victory!!! Now leave I gotta greet the next tortured soul.")
+        sys.exit()
+    if name in Losers:
+        print("You have been killed it seems like you were meant to be sent to the execution realm to be killed but were sent here instead, you're soul shall be put in a jar and kept in the bathroom for the rest of eternity.")
+        sys.exit()
     print("Choose a Weapon: Spear, Staff, Sword, Bow and Arrow, Dagger")
     weapon_choice = ["Spear","Staff","Sword","Bow and Arrow","Dagger"]
     weapon_user_choice = input()
@@ -26,3 +33,7 @@ if __name__ == "__main__":
         if statue_choice == "right":
             print("You walk over to the right statue.")
     sys.exit()
+
+
+
+
