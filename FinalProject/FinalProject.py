@@ -1,6 +1,5 @@
 import sys
 
-
 if __name__ == "__main__":
     #Introduction to the world and where you currently are and where you can go
     print("You wake up in a barely lit room. There is a small chill in the room.")
@@ -18,6 +17,9 @@ if __name__ == "__main__":
     if name == "Piss Master 14, the 5th Lord of Bathania":
         print("Oh my god, it's you your holiness. This humble god greets the 5th Lord of Bathania, one who rules over the great toilet water lakes of the east and the never ending sewers of the west, Piss Master 14, the divin lord of Piss. It seems you were sent here by mistake. I will make sure to fire whoever put you here. Here, I'll send your holiness back to Bathania.")
         sys.exit()
+    if name in Losers:
+        print("You have been killed it seems like you were meant to be sent to the execution realm to be killed but were sent here instead, you're soul shall be put in a jar and kept in the janitors bathroom for the rest of eternity.")
+        sys.exit()
     if name in Saif:
         print("Administrator Detected")
         print("Administrator 0: Saif")
@@ -26,43 +28,30 @@ if __name__ == "__main__":
         print("Activating administrator assisstant Kiser")
         print("Verification required, please enter the system key")
         system_key = input()
-        if system_key == "residentsofthefinalgate":
+        if system_key == "residentofthefinalgate":
             print("How may I assisst you, administrator " + name + "?")
             administrator_privileges = input()
             if administrator_privileges == "activate: reset of purgatory system ver 1.03.24":
                 print("Command received, purgatory system ver 1.03.24 reseting has been initiated")
-                print("reset completed, goodbye administrator")
-            #finish   
+                print("reset completed")
+                sys.exit
+                #find out how to reset the code
+                print("Purgatory System: Removed")
             if administrator_privileges == "activate: erasure process ver 1.2":
                 print("Error, command outside of administrator privileges, erasure not granted")
                 code = input()
-                if code == "activate: oblivion override of systm ver 1.03.24":
-                    print("Override activated, privilige granted to administrator " + name + ".")
+                if code == "activate: oblivion override of purgatory system ver 1.03.24 use key: Final Order of King Noebius":
+                    print("Override activated, privilige granted to administrator " + name + " by order of King Noebius. Erasure of system has been activated.")
                     sys.exit
-    if name in Losers:
-        print("You have been killed it seems like you were meant to be sent to the execution realm to be killed but were sent here instead, you're soul shall be put in a jar and kept in the janitors bathroom for the rest of eternity.")
-        sys.exit()
+                else:
+                    print("Command not applicable. Administrator system defense protocol activated: shutting down program.")
+                    sys.exit 
+            else:
+                print("Command not applicable. Administrator system defense protocol activated: shutting down program.")
+                sys.exit
+        else:
+            print("Command not applicable. Administrator system defense protocol activated: shutting down program.")
+            sys.exit
     print("Welcome, " + name + " to your eternal prison. May luck be with you, one who dares try to escape from their eternal resting place but do remember, they all will try to stop you!")
     #Choosing your weapon
-    print("But before you go you might consider choosing a weapon it might assist you in your adventure")
-    print("Choose a Weapon: Spear, Staff, Sword, Bow and Arrow, Dagger","Fists","Gun")
-    weapon_choice = ["Spear","Staff","Sword","Bow and Arrow","Dagger"]
-    weapon_user_choice = input()
-    print("(" + name + " you must choose a path to go through)")
-    list_choices_1 = ["left","right","break"]
-    choice_1 = input()
-    if choice_1 == "left":
-        print("You stand up and walk through the pure white door.")
-    if choice_1 == "right":
-        print("You stand up and walk through the pure black door.")
-    if choice_1 == "break":
-        print("Which statue would you like to break? The left one or the right one?")
-        statue_choice_list = ["left","right"]
-        statue_choice = input()
-        if statue_choice == "left":
-            print("You walk over to the left statue.")
-        if statue_choice == "right":
-            print("You walk over to the right statue.")
-    sys.exit()
-
 
