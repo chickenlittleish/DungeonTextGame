@@ -24,13 +24,13 @@ class Challenger():
             return self.name  
 
     def weapon(self):
-        weapon_chosen = input("Choose a weapon to assisst you in your feeble adventure: " + str(weapon_list))
+        weapon_chosen = input("Choose a weapon to assist you in your feeble adventure: " + str(weapon_list))
         if weapon_chosen in weapon_list:
                 self.equipped_weapon = weapon_chosen
         else:
             print("Hey I already provided you with a list. choose from it genius")
 
-    def divine_gift(self): 
+   #def divine_gift(self): 
 
 if __name__ == "__main__":
     #Introduction to the world and where you currently are and where you can go
