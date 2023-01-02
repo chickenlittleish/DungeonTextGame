@@ -1,4 +1,5 @@
 import sys
+import time
 
 class Challenger():
     def __init__(self):
@@ -33,8 +34,14 @@ class Challenger():
 if __name__ == "__main__":
     #Introduction to the world and where you currently are and where you can go
     print("You wake up in a barely lit room. There is a small chill in the room.")
+    print(" ")
+    time.sleep(3)
     print("As you stand up you see that to your left, there were 2 huge pure white doors that shined golden that felt somewhat heavenly and divine. To the left of the doors was a tall statue of an angel, her eyes covered in a bandage. It's wings made it seem like it was flying as it held scale in it's right hand up and high and in its left hand, a sword held near her chest.")
+    print(" ")
+    time.sleep(8)
     print("To your right, there were 2 huge pure black doors that shined red that felt ominous and demonic, the opposite of the last one. To the left of the doors was a statue of an angel on her knees. Her eyes were bleeding blood as she held the hilt of a sword pierced through her chest.")
+    print(" ")
+    time.sleep(8)
     #Choosing your name and the special names that gain certain privliges and unlock certain interactions
     Winners = ["mr. bowman", "phil","bowman","phil bowman"]
     Losers = ["matthew","zola","brett","declan","david","sasha","leen","saif sucks","saif is cringe","not sasha","saif is rubbish","declan lynch"]
@@ -43,7 +50,7 @@ if __name__ == "__main__":
     name = input()
     #These are names that just win automatically. It also causes some annoyance to a certain person
     if name.lower() in Winners:
-        print("Victory!!! Now leave, I gotta greet the next tortured soul.")
+        print("Victory!!! Through nepotism you have been allowed to leave the prison, now leave, I gotta greet the next tortured soul. God, why did Jerry have to quit there's only like 5 gods in charge of torturing souls and now I have to finish his weekly quota. Screw you Jerry.")
         sys.exit()
     #He just wins. No questions asked.
     if name == "Piss Master 14, the 5th Lord of Bathania":
@@ -56,26 +63,36 @@ if __name__ == "__main__":
     #This is a fun easter egg if you put my name in that involves some problems
     if name in Saif:
         print("Administrator Detected")
+        time.sleep(2)
         print("Administrator 0: Saif")
+        time.sleep(2)
         print("Booting up administrator system")
+        time.sleep(10)
         print("Transfering from purgatory system ver 1.03.24 to administrator system")
+        time.sleep(6)
         print("Activating administrator assisstant Kiser")
+        time.sleep(7)
         print("Verification required, please enter the system key")
         system_key = input()
         if system_key == "residentofthefinalgate":
             print("How may I assisst you, administrator " + name + "?")
             administrator_privileges = input()
+            print(" ")
             if administrator_privileges == "activate: reset of purgatory system ver 1.03.24":
                 print("Command received, purgatory system ver 1.03.24 reseting has been initiated")
+                time.sleep(15)
+                print(" ")
                 print("reset completed")
+                print("Purgatory System: Removed")
                 sys.exit()
                 #find out how to reset the code
-                print("Purgatory System: Removed")
             if administrator_privileges == "activate: erasure process ver 1.2":
                 print("Error, command outside of administrator privileges, erasure not granted")
                 code = input()
+                print(" ")
                 if code == "activate: oblivion override of purgatory system ver 1.03.24 use key: Final Order of King Noebius":
                     print("Override activated, privilige granted to administrator " + name + " by order of King Noebius. Erasure of system has been activated.")
+                    time.sleep(10)
                     sys.exit()
                 else:
                     print("Command not applicable. Administrator system defense protocol activated: shutting down program.")
