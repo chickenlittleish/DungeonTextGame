@@ -1,35 +1,36 @@
 import sys
 import time
 
+
 class Challenger():
     def __init__(self):
-        self.name = name
-        self.equipped_weapon = None
-        self.alive = True
-        self.weapon_choices = weapon_list
-        self.health = 100
-        #self.divine_treasure = None
+            self.name = name
+            self.equipped_weapon = None
+            self.alive = True
+            self.weapon_choices = weapon_list
+            self.health = 100
+            self.divine_treasure = None
 
     def damage(self, amount):
-        self.health -= amount
-        print(f"{self.name} received {amount} damage")
-        if self.health <=0:
-            self.kill()
-    
+            self.health -= amount
+            print(f"{self.name} received {amount} damage")
+            if self.health <=0:
+                self.kill()
+        
     def kill(self):
-        print(f"{self.name} has died and entered the 6 channels of reincarnation.")
+            print(f"{self.name} has died and entered the 6 channels of reincarnation.")
+
     def __str__(self):
-        return self.name  
+            return self.name  
 
     def weapon(self):
         weapon_chosen = input("Choose a weapon to assisst you in your feeble adventure: " + str(weapon_list))
         if weapon_chosen in weapon_list:
-            self.equipped_weapon = weapon_chosen
+                self.equipped_weapon = weapon_chosen
         else:
             print("Hey I already provided you with a list. choose from it genius")
 
-    #finish
-    #def divine_gift(self): 
+    def divine_gift(self): 
 
 if __name__ == "__main__":
     #Introduction to the world and where you currently are and where you can go
