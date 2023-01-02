@@ -51,7 +51,7 @@ if __name__ == "__main__":
     name = input()
     #These are names that just win automatically. It also causes some annoyance to a certain person
     if name.lower() in Winners:
-        print("Victory!!! Through nepotism you have been allowed to leave the prison, now leave, I gotta greet the next tortured soul. God, why did Jerry have to quit there's only like 5 gods in charge of torturing souls and now I have to finish his weekly quota. Screw you Jerry.")
+        print("Victory!!! Through favoritism and bribing you have been allowed to leave the prison, now leave, I gotta greet the next tortured soul. God, why did Jerry have to quit there's only like 5 gods in charge of torturing souls and now I have to finish his weekly quota. Screw you Jerry.")
         sys.exit()
     #He just wins. No questions asked.
     if name == "Piss Master 14, the 5th Lord of Bathania":
@@ -62,7 +62,7 @@ if __name__ == "__main__":
         print("You have been killed it seems like you were meant to be sent to the execution realm to be killed but were sent here instead, you're soul shall be put in a jar and kept in the janitors bathroom for the rest of eternity.")
         sys.exit()
     #This is a fun easter egg if you put my name in that involves some problems
-    if name in Saif:
+    if name.lower() in Saif:
         print("Administrator Detected")
         time.sleep(2)
         print("Administrator 0: Saif")
