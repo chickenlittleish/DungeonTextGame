@@ -58,8 +58,7 @@ if __name__ == "__main__":
     #This is where you choose your weapon
     print("But before you go you might consider choosing a weapon it might assist you in your adventure")
     print("Choose a Weapon: Spear, Staff, Sword, Bow and Arrow, Dagger","Fists","Axe","Scythe","Club")
-    weapon_list = ["Spear","Staff","Sword","Bow and Arrow","Dagger","ƒ√∑∆"]
-
+    weapon_list = ["Spear","Staff","Sword","Bow and Arrow","Dagger",]
 
 
 
@@ -72,7 +71,7 @@ class Challenger():
         self.alive = True
         self.weapon_choices = weapon_list
         self.health = 100
-        self.divine_treasure = None
+        #self.divine_treasure = None
 
     def damage(self, amount):
         self.health -= amount
@@ -92,7 +91,5 @@ class Challenger():
         else:
             print("Hey I already provided you with a list. choose from it genius")
 
-    def divine_gift(self):
-        if 
-
-    
+    #finish
+    #def divine_gift(self): 
