@@ -108,5 +108,7 @@ if __name__ == "__main__":
     weapon_list = ["Spear","Staff","Sword","Bow and Arrow","Dagger"]
     chollenger = Challenger()
     chollenger.weapon()
+    
+
 
 
