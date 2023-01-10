@@ -86,8 +86,7 @@ if __name__ == "__main__":
                     print(" ")
                     print("reset completed")
                     print("Purgatory System: Removed")
-                    sys.exit()
-                    #tell him how to restart to stary of code
+                    continue
                 if administrator_privileges == "activate: erasure process ver 1.2":
                     print("Error, command outside of administrator privileges, erasure not granted")
                     code = input()
