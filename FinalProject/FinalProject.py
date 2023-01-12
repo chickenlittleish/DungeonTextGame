@@ -25,7 +25,7 @@ class Challenger():
 
     def weapon(self):
         weapon_chosen = input("Choose a weapon to assist you in your feeble adventure: " + str(weapon_list))
-        if weapon_chosen in weapon_list:
+        if weapon_chosen.lower() in weapon_list:
                 self.equipped_weapon = weapon_chosen
         else:
             print("Hey I already provided you with a list. choose from it genius")
@@ -105,10 +105,10 @@ if __name__ == "__main__":
         print("Welcome, " + name + " to your eternal prison. May luck be with you, one who dares try to escape from their eternal resting place but do remember, they all will try to stop you!")
         #This is where you choose your weapon
         print("But before you go you might consider choosing a weapon it might assist you in your adventure")
-        weapon_list = ["Spear","Staff","Sword","Bow and Arrow","Dagger"]
+        weapon_list = ["spear","magic staff","sword","bow and arrow","dagger"]
         chollenger = Challenger()
         chollenger.weapon()
-        
+
         
 
 
