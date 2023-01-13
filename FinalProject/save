@@ -33,7 +33,7 @@ class Challenger():
    #def divine_gift(self): 
 
 if __name__ == "__main__":
-    while True:(try removing)
+    while True:
         #Introduction to the world and where you currently are and where you can go
         print("You wake up in a barely lit room. There is a small chill in the room.")
         print(" ")
