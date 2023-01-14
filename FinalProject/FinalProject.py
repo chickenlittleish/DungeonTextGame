@@ -33,7 +33,8 @@ class Challenger():
    #def divine_gift(self): 
 
 if __name__ == "__main__":
-    while True:(try removing)
+    while True:
+        #(try removing)
         #Introduction to the world and where you currently are and where you can go
         print("You wake up in a barely lit room. There is a small chill in the room.")
         print(" ")
@@ -48,7 +49,7 @@ if __name__ == "__main__":
         Winners = ["mr. bowman", "phil","bowman","phil bowman"]
         Losers = ["matthew","zola","brett","declan","david","sasha","leen","saif sucks","saif is cringe","not sasha","saif is rubbish","declan lynch"]
         Saif = ["saif"]
-        print("A message appears infront of you hovering that says: What is thy name, one who dares to try to escape their eternal prison?(Use capital for every word)")
+        print("A message appears infront of you hovering that says: What is thy name, one who dares to try to escape their eternal prison?")
         name = input()
         #These are names that just win automatically. It also causes some annoyance to a certain person
         if name.lower() in Winners:
@@ -102,12 +103,14 @@ if __name__ == "__main__":
                 #fix it as it doesn't it prints the code after as well and this is for alls the elses
                 print("Command not applicable. Administrator system defense protocol activated: shutting down program.")
                 sys.exit()
-        print("Welcome, " + name + " to your eternal prison. May luck be with you, one who dares try to escape from their eternal resting place but do remember, they all will try to stop you!")
-        #This is where you choose your weapon
-        print("But before you go you might consider choosing a weapon it might assist you in your adventure")
-        weapon_list = ["spear","magic staff","sword","bow and arrow","dagger"]
-        chollenger = Challenger()
-        chollenger.weapon()
+        else:
+            print("Welcome, " + name + " to your eternal prison. May luck be with you, one who dares try to escape from their eternal resting place but do remember, they all will try to stop you!")
+            #This is where you choose your weapon
+            print("But before you go you might consider choosing a weapon it might assist you in your adventure")
+            weapon_list = ["spear","magic staff","sword","bow and arrow","dagger"]
+            chollenger = Challenger()
+            chollenger.weapon()
+
 
         
 
