@@ -9,7 +9,19 @@ class Challenger():
             self.alive = True
             self.weapon_choices = weapon_list
             self.health = 100
-            self.divine_treasure = None
+            self.mana = 100
+            self.divine_artificat = None
+            self.divine_weapon = None
+    
+    def stats(self):
+        print("Stats: ")
+        print(f"Challenger ID: {self.name}")
+        print(f"Weapon: {self.equipped_weapon}")
+        print(f"Life Status: {self.alive}")
+        print(f"Health: {self.health}")
+        print(f"Mana: {self.mana}")
+        print(f"Divine Treasure: {self.divine_artificat} ")
+        print(f"Divine Weapon: {self.divine_weapon}")
 
     def damage(self, amount):
             self.health -= amount
@@ -20,9 +32,6 @@ class Challenger():
     def kill(self):
             print(f"{self.name} has died and entered the 6 channels of reincarnation.")
 
-    def __str__(self):
-            return self.name  
-
     def weapon(self):
         weapon_chosen = input("Choose a weapon to assist you in your feeble adventure: " + str(weapon_list))
         if weapon_chosen.lower() in weapon_list:
@@ -30,11 +39,30 @@ class Challenger():
         else:
             print("Hey I already provided you with a list. choose from it genius")
 
-   #def divine_gift(self): 
+    def divine_artifact(self):
+        print("'Sorry, that isn't an option, please choose either left or right.'")
+        action1_1 = input()
+        if action1_1.lower() == "break":
+            print("Error")
+            action1_2 = input()
+            if action1_2.lower() == "break":
+                print("'Which statue would you like to break? The left or right one? The rising angel or the fallen angel? But be warned, you can only choose one.")
+                time.sleep(1)
+                print("A screen appears infront of you that says heavenly or demonic, which shall you choose?")
+                statue_break = input()
+                if statue_break.lower() == "heavenly":
+                    print("You walk over to the left statue of the angel with the scale and sword and with your " + self.equipped_weapon + " you strike the statue breaking it in 2")
+                    time.sleep(1)
+                    print("You've gained the divine artifact: Fragment of Brilliant Light")
+                    self.divine_artificat = "Fragment of Brilliant Light"
+                if statue_break.lower() == "demonic":
+                    print("You walk over to the eight statue of the angel crying blood who is stabbing herself and with your " + self.equipped_weapon + " you strike the statue breaking it in 2.")
+                    time.sleep(1)
+                    print("You've gained the divine artifact: Horn of the Incarnation of Chaos")
+                    self.divine_artificat = "Horn of the Incarnation of Chaos"
 
 if __name__ == "__main__":
     while True:
-        #(try removing)
         #Introduction to the world and where you currently are and where you can go
         print("You wake up in a barely lit room. There is a small chill in the room.")
         print(" ")
@@ -86,6 +114,7 @@ if __name__ == "__main__":
                     time.sleep(15)
                     print(" ")
                     print("reset completed")
+                    time.sleep(1)
                     print("Purgatory System: Removed")
                     continue
                 if administrator_privileges == "activate: erasure process ver 1.2":
@@ -104,13 +133,40 @@ if __name__ == "__main__":
                 print("Command not applicable. Administrator system defense protocol activated: shutting down program.")
                 sys.exit()
         else:
+            #chollenger = Challenger() fix it bitch change position
             print("Welcome, " + name + " to your eternal prison. May luck be with you, one who dares try to escape from their eternal resting place but do remember, they all will try to stop you!")
             #This is where you choose your weapon
-            print("But before you go you might consider choosing a weapon it might assist you in your adventure")
-            weapon_list = ["spear","magic staff","sword","bow and arrow","dagger"]
-            chollenger = Challenger()
+            print("But before I leave you to your eternal suffering, I'll take pity on you and allow you to choose a weapon to assisst you but it won't change a thing, you won't ever be able to escape, no one has.")
+            weapon_list = ["spear","magic staff","sword","bow and arrow","dagger","shield","gauntlets","axe"]
             chollenger.weapon()
-
+            print("A screen appears infront of you.")
+            time.sleep(1)
+            print("'You may now choose to go through the left door or right door.")
+            time.sleep(1)
+            print("Your 2 choices are: left or right.")
+            action1 = input()
+            action1list = ["left","right","break"]
+            if action1.lower() in action1list:
+                if action1.lower() == "left":
+                    print("'You decide to go through the pure white gate. May luck be with you challenger, one who tries to challenge the will of the heavens.")
+                    time.sleep(1)
+                    print("The screen disappears as you walk to the white gate and push it open.")
+                    time.sleep(1)
+                    print("As it opens, you cover your eyes as a blinding light shines and you proceed into the gate as it locks behind you")
+                    Heavens_Will()
+                if action1.lower() == "right":
+                    print("'You decide to go through the pure black gate. May luck be with you challenger, one who tries to challenge the very labyrinth of hell.'")
+                    time.sleep(1)
+                    print("The screen disappears as you walk to the black gate and push it open.")
+                    time.sleep(1)
+                    print("As it opens, a torrent of hot air hits you as you cover your face to protect yourself and proceed into the gate as it locks behind you")
+                    Hells_Eternal_Grasp()
+                if action1.lower() == "break":
+                    chollenger.divine_artifact()
+            else:
+                while action1.lower() not in action1list:
+                    print("'Please choose one of the options provided to you.'")
+                    action1 == input()
 
         
 
