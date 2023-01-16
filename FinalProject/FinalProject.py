@@ -135,9 +135,11 @@ if __name__ == "__main__":
         else:
             #chollenger = Challenger() fix it bitch change position
             print("Welcome, " + name + " to your eternal prison. May luck be with you, one who dares try to escape from their eternal resting place but do remember, they all will try to stop you!")
+            time.sleep(3)
             #This is where you choose your weapon
             print("But before I leave you to your eternal suffering, I'll take pity on you and allow you to choose a weapon to assisst you but it won't change a thing, you won't ever be able to escape, no one has.")
             weapon_list = ["spear","magic staff","sword","bow and arrow","dagger","shield","gauntlets","axe"]
+            chollenger = Challenger()
             chollenger.weapon()
             print("A screen appears infront of you.")
             time.sleep(1)
