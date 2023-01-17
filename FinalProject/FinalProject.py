@@ -46,20 +46,20 @@ class Challenger():
             print("Error")
             action1_2 = input()
             if action1_2.lower() == "break":
-                print("'Which statue would you like to break? The left or right one? The rising angel or the fallen angel? But be warned, you can only choose one.")
+                print("'Which statue would you like to break? The left or right one? The rising angel or the fallen angel? But be warned, you can only choose one.'")
                 time.sleep(1)
                 print("A screen appears infront of you that says heavenly or demonic, which shall you choose?")
                 statue_break = input()
                 if statue_break.lower() == "heavenly":
                     print("You walk over to the left statue of the angel with the scale and sword and with your " + self.equipped_weapon + " you strike the statue breaking it in 2")
                     time.sleep(1)
-                    print("You've gained the divine artifact: Fragment of Brilliant Light")
-                    self.divine_artificat = "Fragment of Brilliant Light"
+                    print("You've gained the divine artifact: Brightest Fragment of Brilliant Light")
+                    self.divine_artificat = "Brightest Fragment of Brilliant Light"
                 if statue_break.lower() == "demonic":
-                    print("You walk over to the eight statue of the angel crying blood who is stabbing herself and with your " + self.equipped_weapon + " you strike the statue breaking it in 2.")
+                    print("You walk over to the right statue of the angel crying blood who is stabbing herself and with your " + self.equipped_weapon + " you strike the statue breaking it in 2.")
                     time.sleep(1)
-                    print("You've gained the divine artifact: Horn of the Incarnation of Chaos")
-                    self.divine_artificat = "Horn of the Incarnation of Chaos"
+                    print("You've gained the divine artifact: Horn of the Incarnation of Chaos, Baphomet")
+                    self.divine_artificat = "Horn of the Incarnation of Chaos, Baphomet"
 
 if __name__ == "__main__":
     while True:
@@ -143,7 +143,7 @@ if __name__ == "__main__":
             chollenger.weapon()
             print("A screen appears infront of you.")
             time.sleep(1)
-            print("'You may now choose to go through the left door or right door.")
+            print("'You may now choose to go through the left door or right door.'")
             time.sleep(1)
             print("Your 2 choices are: left or right.")
             action1 = input()
