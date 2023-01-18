@@ -165,6 +165,21 @@ if __name__ == "__main__":
                     Hells_Eternal_Grasp()
                 if action1.lower() == "break":
                     chollenger.divine_artifact()
+                    print("'You must now choose a door to go through'")
+                    if action1_3.lower() == "left":
+                            print("'You decide to go through the pure white gate. May luck be with you challenger, one who tries to challenge the will of the heavens.")
+                            time.sleep(1)
+                            print("The screen disappears as you walk to the white gate and push it open.")
+                            time.sleep(1)
+                            print("As it opens, you cover your eyes as a blinding light shines and you proceed into the gate as it locks behind you")
+                            Heavens_Will()
+                        if action1_3.lower() == "right":
+                            print("'You decide to go through the pure black gate. May luck be with you challenger, one who tries to challenge the very labyrinth of hell.'")
+                            time.sleep(1)
+                            print("The screen disappears as you walk to the black gate and push it open.")
+                            time.sleep(1)
+                            print("As it opens, a torrent of hot air hits you as you cover your face to protect yourself and proceed into the gate as it locks behind you")
+                            Hells_Eternal_Grasp()
             else:
                 while action1.lower() not in action1list:
                     print("'Please choose one of the options provided to you.'")
