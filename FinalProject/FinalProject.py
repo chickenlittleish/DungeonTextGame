@@ -1,6 +1,87 @@
 import sys
 import time
 
+def Calling_Heavens_Will():
+    print("'You decide to go through the pure white gate. May luck be with you challenger, one who tries to challenge the will of the heavens.")
+    time.sleep(1)
+    print("The screen disappears as you walk to the white gate and push it open.")
+    time.sleep(1)
+    print("As it opens, you cover your eyes as a blinding light shines and you proceed into the gate as it locks behind you")
+    Heavens_Will()
+
+def Calling_Hells_Eternal_Grasp():
+    print("'You decide to go through the pure black gate. May luck be with you challenger, one who tries to challenge the very labyrinth of hell.'")
+    time.sleep(1)
+    print("The screen disappears as you walk to the black gate and push it open.")
+    time.sleep(1)
+    print("As it opens, a torrent of hot air hits you as you cover your face to protect yourself and proceed into the gate as it locks behind you")
+    Hells_Eternal_Grasp()
+
+def AdministratorDeath1():
+    print("'The impudence.'")
+    time.sleep(1)
+    print("You hear as you suddenly feel yourself flying. Then you see it, your body is still chained up and the adminsitrator is behind you. He cut off you head.")
+    time.sleep(3)
+    print("A screen suddenly appears in front of you.")
+    chollenger.kill()
+
+
+def Confrontation1():
+    print("'Error. Breech of plausability has been detectected. Calling administrator.'")
+    print("The screen that appeared disappeared as you saw a bit of light appearing before you. A crack was forming in the space above you as you.")
+    time.sleep(4)
+    print("You see a being emerge from the crack as a man with horns and angel wings in a suit emerged from it.")
+    print("A screen appeared infront of you.")
+    print("Error.")
+    time.sleep(1)
+    print("Error.")
+    time.sleep(1)
+    print("Administrator detected in prison.")
+    time.sleep(2)
+    print("Administrator identified as Administrator Xyron of the Central Star Bureau. Notifying hig-")
+    print("'I swear that system is always so annoying, I told them we should remove it.'")
+    time.sleep(3)
+    print("'So I guess you're the anomoly that broke the plausability of'. As he said this he looked up at you and snapped his fingers.")
+    time.sleep(6)
+    print("Out of nowhere chain appeared and held you in place. You couldn't move at all.")
+    time.sleep(3)
+    print("'Listen here, I'm currently busy dealing with the mess that Apollo caused in the Greek sector so I don't have the time to deal with this. Now explain, how the hell does a mere mortal know of secrets that only administators know of?'")
+    time.sleep(9)
+    print("'Like do you know how much of a mess we're in right now due to you? This is even worse than what Apollo, that drunk screw-up did. You've breeched the plausability of this prison to the point that now the higher-ups are demanding for a check of the fairness of this prison and it's trials.'")
+    confrontation = input()
+    confrontationlist = ["talk, stay silent, spit, try to break free"]
+    if confrontation in confrontationlist: 
+        if confrontation == "talk":
+            print("'Explain Now!' He demands.")
+            confrontation1_2 = input()
+            confrontation1_2list = ["fair?","lie"]
+            if confrontation1_2 in confrontation1_2list:
+                if confrontation1_2 == "lie":
+                    AdministratorDeath1()
+                if confrontation1_2 == "fair?":
+                    print("'What did you say?'You yell at him.")
+                    print("You respond that this prison was never fair and that he has no right to talk about fairness when he literally accepts bribes from the Chinese sector and the Indian sector to make the prison harder for certain inmates.")
+                    time.sleep(7)
+                    print("You then mention how it also breaks the rules of the prison for an administrator to descend in their true form infront of an inmate so what would happen if you were to report him now, so unless he wants to get reported and deleted, he should leave and stay silent.")
+                    time.sleep(9)
+                    print("'Fine you win this time but the next time you get reported will be your last.'")
+                    print("He walks back through the crack in space as it closes up behind him.")
+                    chollenger.divine_weapon_making()
+        if confrontation == "stay silent":
+            AdministratorDeath1()
+        if confrontation == "spit":
+            AdministratorDeath1()
+        if confrontation == "try to break free":
+            AdministratorDeath1()
+    else:
+        print("'The impudence.'")
+        time.sleep(1)
+        print("You hear as you suddenly feel yourself flying. Then you see it, your body is still chained up and the adminsitrator is behind you. He cut off you head.")
+        time.sleep(3)
+        print("A screen suddenly appears in front of you.")
+        AdministratorDeath1()
+
+
 
 class Challenger():
     def __init__(self):
@@ -42,10 +123,10 @@ class Challenger():
     def divine_artifact(self):
         print("'Sorry, that isn't an option, please choose either left or right.'")
         action1_1 = input()
-        if action1_1.lower() == "break":
+        if action1_1.lower() == "break them":
             print("Error")
             action1_2 = input()
-            if action1_2.lower() == "break":
+            if action1_2.lower() == "break that which seals the truth of reality":
                 print("'Which statue would you like to break? The left or right one? The rising angel or the fallen angel? But be warned, you can only choose one.'")
                 time.sleep(1)
                 print("A screen appears infront of you that says heavenly or demonic, which shall you choose?")
@@ -53,13 +134,38 @@ class Challenger():
                 if statue_break.lower() == "heavenly":
                     print("You walk over to the left statue of the angel with the scale and sword and with your " + self.equipped_weapon + " you strike the statue breaking it in 2")
                     time.sleep(1)
-                    print("You've gained the divine artifact: Brightest Fragment of Brilliant Light")
-                    self.divine_artificat = "Brightest Fragment of Brilliant Light"
+                    print("You've gained the divine artifact: Brightest Fragment of the 9th Brilliant Light, Ariel")
+                    self.divine_artificat = "Brightest Fragment of the 9th Brilliant Light, Ariel"
                 if statue_break.lower() == "demonic":
                     print("You walk over to the right statue of the angel crying blood who is stabbing herself and with your " + self.equipped_weapon + " you strike the statue breaking it in 2.")
                     time.sleep(1)
                     print("You've gained the divine artifact: Horn of the Incarnation of Chaos, Baphomet")
                     self.divine_artificat = "Horn of the Incarnation of Chaos, Baphomet"
+
+    def divine_weapon_making(self):
+        print("A screen appears infront of you.")
+        time.sleep(1)
+        print("'Welcome to the crafting system, as you are the first of the 563rd generation to open the crafting system you get a prize: you're first try is free!'")
+        time.sleep(6)
+        print("'Now what would you like to craft and what ingredients would you like to use, your weapon or divine artifact as the first ingredient?'")
+        ingredient1 = input()
+        ingredient1list = [self.divine_artificat, self.equipped_weapon]
+        print("Currently possessed ingredients:" + str(ingredient1list))
+
+
+        if ingredient1 == "leave":
+            print("Exiting crafting system and returning back to the prison.")
+            print("A screen appears infront of you: 'Choose left or right.'")
+            action2 = input()
+            action2list = ["left","right","combine the 3 realms to shatter them and shatter them to combine them"]
+            if action2.lower() in action2list:
+                if action2.lower() == "left":
+                    Calling_Heavens_Will()
+                if action2.lower() == "right":
+                    Calling_Hells_Eternal_Grasp()
+        
+
+
 
 if __name__ == "__main__":
     while True:
@@ -129,11 +235,9 @@ if __name__ == "__main__":
                         print("Command not applicable. Administrator system defense protocol activated: shutting down program.")
                         sys.exit()
             else:
-                #fix it as it doesn't it prints the code after as well and this is for alls the elses
                 print("Command not applicable. Administrator system defense protocol activated: shutting down program.")
                 sys.exit()
         else:
-            #chollenger = Challenger() fix it bitch change position
             print("Welcome, " + name + " to your eternal prison. May luck be with you, one who dares try to escape from their eternal resting place but do remember, they all will try to stop you!")
             time.sleep(3)
             #This is where you choose your weapon
@@ -147,43 +251,32 @@ if __name__ == "__main__":
             time.sleep(1)
             print("Your 2 choices are: left or right.")
             action1 = input()
-            action1list = ["left","right","break"]
+            action1list = ["left","right","break the doors at the edge of the universe to unveil that which has been sealed away"]
             if action1.lower() in action1list:
                 if action1.lower() == "left":
-                    print("'You decide to go through the pure white gate. May luck be with you challenger, one who tries to challenge the will of the heavens.")
-                    time.sleep(1)
-                    print("The screen disappears as you walk to the white gate and push it open.")
-                    time.sleep(1)
-                    print("As it opens, you cover your eyes as a blinding light shines and you proceed into the gate as it locks behind you")
-                    Heavens_Will()
+                    Calling_Heavens_Will()
                 if action1.lower() == "right":
-                    print("'You decide to go through the pure black gate. May luck be with you challenger, one who tries to challenge the very labyrinth of hell.'")
-                    time.sleep(1)
-                    print("The screen disappears as you walk to the black gate and push it open.")
-                    time.sleep(1)
-                    print("As it opens, a torrent of hot air hits you as you cover your face to protect yourself and proceed into the gate as it locks behind you")
-                    Hells_Eternal_Grasp()
-                if action1.lower() == "break":
+                    Calling_Hells_Eternal_Grasp()
+                if action1.lower() == "break the doors at the edge of the universe to unveil that which has been sealed away":
                     chollenger.divine_artifact()
-                    print("'You must now choose a door to go through'")
-                    if action1_3.lower() == "left":
-                            print("'You decide to go through the pure white gate. May luck be with you challenger, one who tries to challenge the will of the heavens.")
-                            time.sleep(1)
-                            print("The screen disappears as you walk to the white gate and push it open.")
-                            time.sleep(1)
-                            print("As it opens, you cover your eyes as a blinding light shines and you proceed into the gate as it locks behind you")
-                            Heavens_Will()
-                        if action1_3.lower() == "right":
-                            print("'You decide to go through the pure black gate. May luck be with you challenger, one who tries to challenge the very labyrinth of hell.'")
-                            time.sleep(1)
-                            print("The screen disappears as you walk to the black gate and push it open.")
-                            time.sleep(1)
-                            print("As it opens, a torrent of hot air hits you as you cover your face to protect yourself and proceed into the gate as it locks behind you")
-                            Hells_Eternal_Grasp()
-            else:
-                while action1.lower() not in action1list:
-                    print("'Please choose one of the options provided to you.'")
-                    action1 == input()
+                    print("The same screen appears infront of you: 'Choose left or right.'")
+                    action2 = input()
+                    action2list = ["left","right","combine the 3 realms to shatter them and shatter them to combine them"]
+                    if action2.lower() in action2list:
+                        if action2.lower() == "left":
+                            Calling_Heavens_Will()
+                        if action2.lower() == "right":
+                            Calling_Hells_Eternal_Grasp()
+                        if action2.lower() == "combine the 3 realms to shatter them and shatter them to combine them":
+                            if chollenger.divine_artificat == "Horn of the Incarnation of Chaos, Baphomet" or "Brightest Fragment of the 9th Brilliant Light, Ariel":
+                                Confrontation1()
+                            else:
+                                print("'option does not exist.")
+                                print("please choose a valid option: left or right.")
+                                action2 = input()
+            while action1.lower() not in action1list:
+                print("'Please choose one of the options provided to you.'")
+                action1 = input()
 
         
 
