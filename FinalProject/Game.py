@@ -6,7 +6,7 @@ def Calling_Heavens_Will():
     time.sleep(1)
     print("The screen disappears as you walk to the white gate and push it open.")
     time.sleep(1)
-    print("As it opens, you cover your eyes as a blinding light shines and you proceed into the gate as it locks behind you")
+    print("As it opens, you cover your eyes as a blinding light shines and you proceed into the gate as it locks behind you.")
     Heavens_Will()
 
 def Calling_Hells_Eternal_Grasp():
@@ -14,7 +14,7 @@ def Calling_Hells_Eternal_Grasp():
     time.sleep(1)
     print("The screen disappears as you walk to the black gate and push it open.")
     time.sleep(1)
-    print("As it opens, a torrent of hot air hits you as you cover your face to protect yourself and proceed into the gate as it locks behind you")
+    print("As it opens, a torrent of hot air hits you as you cover your face to protect yourself and proceed into the gate as it locks behind you.")
     Hells_Eternal_Grasp()
 
 def AdministratorDeath1():
@@ -28,13 +28,13 @@ def AdministratorDeath1():
 
 def Confrontation1():
     print("'Error. Breech of plausability has been detectected. Calling administrator.'")
-    print("The screen that appeared disappeared as you saw a bit of light appearing before you. A crack was forming in the space above you as you.")
+    print("The screen that appeared glitched out as you saw a bit of light appearing before you. A crack was forming in the space above you as you.")
     time.sleep(4)
     print("You see a being emerge from the crack as a man with horns and angel wings in a suit emerged from it.")
     print("A screen appeared infront of you.")
-    print("Error.")
+    print("Error")
     time.sleep(1)
-    print("Error.")
+    print("Error")
     time.sleep(1)
     print("Administrator detected in prison.")
     time.sleep(2)
@@ -46,10 +46,10 @@ def Confrontation1():
     print("Out of nowhere chain appeared and held you in place. You couldn't move at all.")
     time.sleep(3)
     print("'Listen here, I'm currently busy dealing with the mess that Apollo caused in the Greek sector so I don't have the time to deal with this. Now explain, how the hell does a mere mortal know of secrets that only administators know of?'")
-    time.sleep(9)
+    time.sleep(3)
     print("'Like do you know how much of a mess we're in right now due to you? This is even worse than what Apollo, that drunk screw-up did. You've breeched the plausability of this prison to the point that now the higher-ups are demanding for a check of the fairness of this prison and it's trials.'")
     confrontation = input()
-    confrontationlist = ["talk, stay silent, spit, try to break free"]
+    confrontationlist = ["talk", "stay silent", "spit", "try to break free"]
     if confrontation in confrontationlist: 
         if confrontation == "talk":
             print("'Explain Now!' He demands.")
@@ -59,14 +59,16 @@ def Confrontation1():
                 if confrontation1_2 == "lie":
                     AdministratorDeath1()
                 if confrontation1_2 == "fair?":
-                    print("'What did you say?'You yell at him.")
-                    print("You respond that this prison was never fair and that he has no right to talk about fairness when he literally accepts bribes from the Chinese sector and the Indian sector to make the prison harder for certain inmates.")
+                    print("'What did you say? You yell at him.")
+                    print("You respond that this prison was never fair to begin withand that he has no right to talk about fairness when he literally accepts bribes from the Chinese sector and the Indian sector to make the prison harder for certain contestants you greedy bastard.")
                     time.sleep(7)
-                    print("You then mention how it also breaks the rules of the prison for an administrator to descend in their true form infront of an inmate so what would happen if you were to report him now, so unless he wants to get reported and deleted, he should leave and stay silent.")
+                    print("You then mention how it also breaks the rules of the prison for an administrator to descend in their true form infront of a contestant so what would happen if you were to report him now? So unless he wants to get reported and deleted, he should leave and stay silent.")
                     time.sleep(9)
                     print("'Fine you win this time but the next time you get reported will be your last.'")
                     print("He walks back through the crack in space as it closes up behind him.")
                     chollenger.divine_weapon_making()
+                else:
+                    AdministratorDeath1()
         if confrontation == "stay silent":
             AdministratorDeath1()
         if confrontation == "spit":
@@ -74,11 +76,6 @@ def Confrontation1():
         if confrontation == "try to break free":
             AdministratorDeath1()
     else:
-        print("'The impudence.'")
-        time.sleep(1)
-        print("You hear as you suddenly feel yourself flying. Then you see it, your body is still chained up and the adminsitrator is behind you. He cut off you head.")
-        time.sleep(3)
-        print("A screen suddenly appears in front of you.")
         AdministratorDeath1()
 
 
@@ -91,7 +88,7 @@ class Challenger():
             self.weapon_choices = weapon_list
             self.health = 100
             self.mana = 100
-            self.divine_artificat = None
+            self.possessed_divine_artifact = None
             self.divine_weapon = None
     
     def stats(self):
@@ -101,7 +98,7 @@ class Challenger():
         print(f"Life Status: {self.alive}")
         print(f"Health: {self.health}")
         print(f"Mana: {self.mana}")
-        print(f"Divine Treasure: {self.divine_artificat} ")
+        print(f"Divine Treasure: {self.possessed_divine_artifact} ")
         print(f"Divine Weapon: {self.divine_weapon}")
 
     def damage(self, amount):
@@ -135,34 +132,101 @@ class Challenger():
                     print("You walk over to the left statue of the angel with the scale and sword and with your " + self.equipped_weapon + " you strike the statue breaking it in 2")
                     time.sleep(1)
                     print("You've gained the divine artifact: Brightest Fragment of the 9th Brilliant Light, Ariel")
-                    self.divine_artificat = "Brightest Fragment of the 9th Brilliant Light, Ariel"
+                    self.possessed_divine_artifact = "Brightest Fragment of the 9th Brilliant Light, Ariel"
                 if statue_break.lower() == "demonic":
                     print("You walk over to the right statue of the angel crying blood who is stabbing herself and with your " + self.equipped_weapon + " you strike the statue breaking it in 2.")
                     time.sleep(1)
                     print("You've gained the divine artifact: Horn of the Incarnation of Chaos, Baphomet")
-                    self.divine_artificat = "Horn of the Incarnation of Chaos, Baphomet"
+                    self.possessed_divine_artifact = "Horn of the Incarnation of Chaos, Baphomet"
+
+    def God_Weapons(self):
+        if self.possessed_divine_artifact == "Horn of the Incarnation of Chaos, Baphomet":
+            if self.equipped_weapon == "spear":
+                print("You're 3 choices are: ")
+                print("1) Hell Splitting Spear")
+                print("2) Chaos Origin Spear")
+                print("3) Chaotic Hellfire Spear")
+                God_weapon = input()
+                God_weapon_list = ["hell splitting spear", "chaos origin spear", "chaotic hellfire spear"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+            #if self.equipped_weapon == "magic staff":
+
+            #if self.equipped_weapon == "sword":
+
+            #if self.equipped_weapon == "bow and arrow":
+            
+            #if self.equipped_weapon == "dagger":
+
+            #if self.equipped_weapon == "shield":
+
+            #if self.equipped_weapon == "gauntlets":
+
+            #if self.equipped_weapon == "axe":
+
+        #if self.possessed_divine_artifact == "Brightest Fragment of the 9th Brilliant Light, Ariel":
+            #if self.equipped_weapon == "spear":
+
+            #if self.equipped_weapon == "magic staff":
+
+            #if self.equipped_weapon == "sword":
+
+            #if self.equipped_weapon == "bow and arrow":
+            
+            #if self.equipped_weapon == "dagger":
+
+            #if self.equipped_weapon == "shield":
+
+            #if self.equipped_weapon == "gauntlets":
+
+            #if self.equipped_weapon == "axe":
+
+            
 
     def divine_weapon_making(self):
         print("A screen appears infront of you.")
         time.sleep(1)
-        print("'Welcome to the crafting system, as you are the first of the 563rd generation to open the crafting system you get a prize: you're first try is free!'")
+        print("Setting up crafting system.")
         time.sleep(6)
-        print("'Now what would you like to craft and what ingredients would you like to use, your weapon or divine artifact as the first ingredient?'")
+        print("'Welcome to the crafting system, as you are the first of the 563rd generation to open the crafting system you get a prize: you're first try is free!'")
+        print("'Now what what ingredients would you like to use?'")
+        ingredient1list = [self.possessed_divine_artifact, self.equipped_weapon]
+        print("Currently possessed ingredients:" + str(ingredient1list) + ". Please choose one these items or you could leave if you want.")
         ingredient1 = input()
-        ingredient1list = [self.divine_artificat, self.equipped_weapon]
-        print("Currently possessed ingredients:" + str(ingredient1list))
-
-
+        if ingredient1 == self.possessed_divine_artifact:
+            print("Ingredient 1: " + self.possessed_divine_artifact + " has been used. Please choose ingredient 2.")
+            print("Ingredients left: " + self.equipped_weapon)
+            ingredient2 = input()
+            if ingredient2.lower() == self.equipped_weapon:
+                print("you have chosen: " + self.equipped_weapon + " as you 2nd ingredient. Combining " + self.equipped_weapon + " with " + self.possessed_divine_artifact + ". Please wait dear contestant.")
+                time.sleep(7)
+                print("Done. Your ingredients have been combined. You have 3 choices to choose from for your final crafted item.")
+                self.God_Weapons()
+                ingredient2 = input()
+        if ingredient1.lower() == self.equipped_weapon:
+            print("Ingredient 1: " + self.equipped_weapon + " has been used. Please choose ingredient 2.")
+            print("Ingredients left: " + self.possessed_divine_artifact)
+            ingredient2 = input()
+            if ingredient2 == self.possessed_divine_artifact:
+                print("you have chosen: " + self.possessed_divine_artifact + " as you 2nd ingredient. Combining " + self.possessed_divine_artifact + " with " + self.equipped_weapon + ". Please wait dear contestant.")
+                time.sleep(7)
+                print("Done. Your ingredients have been combined. You have 3 choices to choose from for your final crafted item.")
+                self.God_Weapons()
+                ingredient2 = input()
         if ingredient1 == "leave":
             print("Exiting crafting system and returning back to the prison.")
             print("A screen appears infront of you: 'Choose left or right.'")
             action2 = input()
-            action2list = ["left","right","combine the 3 realms to shatter them and shatter them to combine them"]
+            action2list = ["left","right"]
             if action2.lower() in action2list:
                 if action2.lower() == "left":
                     Calling_Heavens_Will()
                 if action2.lower() == "right":
                     Calling_Hells_Eternal_Grasp()
+        else:
+            print("That is not a valid option, please choose from the list provided")
+            ingredient1 = input()
         
 
 
@@ -201,7 +265,7 @@ if __name__ == "__main__":
         if name.lower() in Saif:
             print("Administrator Detected")
             time.sleep(2)
-            print("Administrator 0: Saif")
+            print("0th Administrator of the system: Saif")
             time.sleep(2)
             print("Booting up administrator system")
             time.sleep(10)
@@ -268,12 +332,12 @@ if __name__ == "__main__":
                         if action2.lower() == "right":
                             Calling_Hells_Eternal_Grasp()
                         if action2.lower() == "combine the 3 realms to shatter them and shatter them to combine them":
-                            if chollenger.divine_artificat == "Horn of the Incarnation of Chaos, Baphomet" or "Brightest Fragment of the 9th Brilliant Light, Ariel":
+                            if chollenger.possessed_divine_artifact.lower() == "Horn of the Incarnation of Chaos, Baphomet" or "Brightest Fragment of the 9th Brilliant Light, Ariel":
                                 Confrontation1()
                             else:
                                 print("'option does not exist.")
                                 print("please choose a valid option: left or right.")
-                                action2 = input()
+                                action1 = input()
             while action1.lower() not in action1list:
                 print("'Please choose one of the options provided to you.'")
                 action1 = input()
