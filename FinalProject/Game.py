@@ -9,6 +9,12 @@ def Calling_Heavens_Will():
     print("As it opens, you cover your eyes as a blinding light shines and you proceed into the gate as it locks behind you.")
     Heavens_Will()
 
+def Heavens_Will():
+    print("As you pass through the gate. You are immediately blocked by a pay wall stating you don't have access to the Heavenly Realm Expansion")
+    time.sleep(6)
+    print("Just kidding Just kidding. This is still a work in development so it will be added later but I wanted to say thanks for playing this small little project")
+    sys.exit()
+
 def Calling_Hells_Eternal_Grasp():
     print("'You decide to go through the pure black gate. May luck be with you challenger, one who tries to challenge the very labyrinth of hell.'")
     time.sleep(1)
@@ -16,6 +22,12 @@ def Calling_Hells_Eternal_Grasp():
     time.sleep(1)
     print("As it opens, a torrent of hot air hits you as you cover your face to protect yourself and proceed into the gate as it locks behind you.")
     Hells_Eternal_Grasp()
+
+def Hells_Eternal_Grasp():
+    print("As you pass through the gate. You are immediately blocked by a pay wall stating you don't have access to the Heavenly Realm Expansion")
+    time.sleep(6)
+    print("Just kidding Just kidding. This is still a work in development so it will be added later but I wanted to say thanks for playing this small little project")
+    sys.exit()
 
 def AdministratorDeath1():
     print("'The impudence.'")
@@ -143,44 +155,176 @@ class Challenger():
         if self.possessed_divine_artifact == "Horn of the Incarnation of Chaos, Baphomet":
             if self.equipped_weapon == "spear":
                 print("You're 3 choices are: ")
-                print("1) Hell Splitting Spear")
+                print("1) Point of Decemation")
                 print("2) Chaos Origin Spear")
                 print("3) Chaotic Hellfire Spear")
                 God_weapon = input()
-                God_weapon_list = ["hell splitting spear", "chaos origin spear", "chaotic hellfire spear"]
+                God_weapon_list = ["point of decemation", "chaos origin spear", "chaotic hellfire spear"]
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
-            #if self.equipped_weapon == "magic staff":
+            if self.equipped_weapon == "magic staff":
+                print("You're 3 choices are: ")
+                print("1) Eternal Fire Staff")
+                print("2) Primordial Chaos Staff")
+                print("3) Hell Summoning Staff")
+                God_weapon = input()
+                God_weapon_list = ["eteral fire staff", "primordial chaos staff", "hell summoning staff"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+            if self.equipped_weapon == "sword":
+                print("You're 3 choices are: ")
+                print("1) Soul Splitting Blade")
+                print("2) Sword of 6 Reincarnations")
+                print("3) Blade of a 1000 Sufferings")
+                God_weapon = input()
+                God_weapon_list = ["soul splitting blade", "sword of 6 reincarnations", "blade of a 1000 sufferings"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+            if self.equipped_weapon == "bow and arrow ":
+                print("You're 3 choices are: ")
+                print("1) Soul Chasing Arrow")
+                print("2) Cloud Piercer")
+                print("3) Void Shattering Bow")
+                God_weapon = input()
+                God_weapon_list = ["soul chasing bow", "cloud piercer", "void shattering bow"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+            if self.equipped_weapon == "dagger":
+                print("You're 3 choices are: ")
+                print("1) Sickles of Death")
+                print("2) Baphomets Fangs")
+                print("3) Prmordial Blood Daggers of the First Demon")
+                God_weapon = input()
+                God_weapon_list = ["Sickles of Death", "baphomets fangs", "primordial blood daggers of the first demon"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
 
-            #if self.equipped_weapon == "sword":
+            if self.equipped_weapon == "shield":
+                print("You're 3 choices are: ")
+                print("1) Hells Barricade")
+                print("2) Gates of Hell")
+                print("3) Starved Gluttonous Shield")
+                God_weapon = input()
+                God_weapon_list = ["hells barricade", "gates of hell", "starved gluttonous shield"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
 
-            #if self.equipped_weapon == "bow and arrow":
+            if self.equipped_weapon == "gauntlets":
+                print("You're 3 choices are: ")
+                print("1) Soul Grasping Fist")
+                print("2) Chains of Hell")
+                print("3) Claws of Cerberus")
+                God_weapon = input()
+                God_weapon_list = ["soul grasping fist", "chains of hell", "claws of cerberus"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+
+            if self.equipped_weapon == "axe":
+                print("You're 3 choices are: ")
+                print("1) Executioner of Life")
+                print("2) Soul Severing Axe")
+                print("3) Blood Gods Fury")
+                God_weapon = input()
+                God_weapon_list = ["executioner of life", "soul severing axe", "blood gods fury"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+
+        if self.possessed_divine_artifact == "Brightest Fragment of the 9th Brilliant Light, Ariel":
+            if self.equipped_weapon == "spear":
+                print("You're 3 choices are: ")
+                print("1) Holy Light Gods Spear")
+                print("2) Primordial Lightning Spear")
+                print("3) World Piercer")
+                God_weapon = input()
+                God_weapon_list = ["holy light gods spear", "primordial lightning spear", "world piercer"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+
+            if self.equipped_weapon == "magic staff":
+                print("You're 3 choices are: ")
+                print("1) Staff of the Constellation")
+                print("2) Bifröst Caller")
+                print("3) Branch of the World Tree")
+                God_weapon = input()
+                God_weapon_list = ["staff of the constellation", "bifröst caller", "branch of the world tree"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+
+            if self.equipped_weapon == "sword":
+                print("You're 3 choices are: ")
+                print("1) Final Cut")
+                print("2) Severance of Life and Death")
+                print("3) Dawn of Judgement")
+                God_weapon = input()
+                God_weapon_list = ["final cut", "severance of life and death", "dawn of judgement"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + "."):
+
+            if self.equipped_weapon == "bow and arrow":
+                print("You're 3 choices are: ")
+                print("1) Spirit Whisperer")
+                print("2) Eternal Shining Light")
+                print("3) Last Light of a Crumbling World")
+                God_weapon = input()
+                God_weapon_list = ["spirit whisperer", "eternal shining light", "last light of a crumbling world"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
             
-            #if self.equipped_weapon == "dagger":
+            if self.equipped_weapon == "dagger":
+                print("You're 3 choices are: ")
+                print("1) Fragments of Light")
+                print("2) Sunforged Daggers")
+                print("3) Moonlight Daggers")
+                God_weapon = input()
+                God_weapon_list = ["fragments of light", "sunforged daggers", "moonlight daggers"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
 
-            #if self.equipped_weapon == "shield":
+            if self.equipped_weapon == "shield":
+                print("You're 3 choices are: ")
+                print("1) Wall of Light")
+                print("2) Worlds Edge")
+                print("3) Barrier of the Heavenly Realm")
+                God_weapon = input()
+                God_weapon_list = ["wall of light", "worlds edge", "barrier of the heavenly realm"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
 
-            #if self.equipped_weapon == "gauntlets":
+            if self.equipped_weapon == "gauntlets":
+                print("You're 3 choices are: ")
+                print("1) Divine Retribution")
+                print("2) Wrath of the Gods")
+                print("3) Divine Dragons Roar")
+                God_weapon = input()
+                God_weapon_list = ["divine retribution", "wrath of the gods", "divine dragons roar"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
 
-            #if self.equipped_weapon == "axe":
-
-        #if self.possessed_divine_artifact == "Brightest Fragment of the 9th Brilliant Light, Ariel":
-            #if self.equipped_weapon == "spear":
-
-            #if self.equipped_weapon == "magic staff":
-
-            #if self.equipped_weapon == "sword":
-
-            #if self.equipped_weapon == "bow and arrow":
-            
-            #if self.equipped_weapon == "dagger":
-
-            #if self.equipped_weapon == "shield":
-
-            #if self.equipped_weapon == "gauntlets":
-
-            #if self.equipped_weapon == "axe":
+            if self.equipped_weapon == "axe":
+                print("You're 3 choices are: ")
+                print("1) Universal Severance")
+                print("2) Divine Star Splitter")
+                print("3) Fate Severing Axe")
+                God_weapon = input()
+                God_weapon_list = ["universal severance", "divine star splitter", "fate severing axe"]
+                if God_weapon.lower() in God_weapon_list:
+                    self.divine_weapon = God_weapon
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
 
             
 
@@ -188,8 +332,11 @@ class Challenger():
         print("A screen appears infront of you.")
         time.sleep(1)
         print("Setting up crafting system.")
+        time.sleep(1)
+        print("Booting up Forge of the Stars")
         time.sleep(6)
-        print("'Welcome to the crafting system, as you are the first of the 563rd generation to open the crafting system you get a prize: you're first try is free!'")
+        print("'Welcome to the forge of the world, also known as the crafting system, as you are the first of the 563rd generation to open the crafting system you get a prize: you're first try is free!'")
+        time.sleep(7)
         print("'Now what what ingredients would you like to use?'")
         ingredient1list = [self.possessed_divine_artifact, self.equipped_weapon]
         print("Currently possessed ingredients:" + str(ingredient1list) + ". Please choose one these items or you could leave if you want.")
