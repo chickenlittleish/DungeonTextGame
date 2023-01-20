@@ -1,6 +1,7 @@
 import sys
 import time
 
+#When the user wants to go through the left door also known the white door, this small scene will play out before sending them through it
 def Calling_Heavens_Will():
     print("'You decide to go through the pure white gate. May luck be with you challenger, one who tries to challenge the will of the heavens.")
     time.sleep(1)
@@ -9,12 +10,14 @@ def Calling_Heavens_Will():
     print("As it opens, you cover your eyes as a blinding light shines and you proceed into the gate as it locks behind you.")
     Heavens_Will()
 
+#When the user decides to enter the white door, this is the code that will play out for the Heavenly door and the Heaven section of the game
 def Heavens_Will():
     print("As you pass through the gate. You are immediately blocked by a pay wall stating you don't have access to the Heavenly Realm Expansion")
     time.sleep(6)
     print("Just kidding Just kidding. This is still a work in development so it will be added later but I wanted to say thanks for playing this small little project")
     sys.exit()
 
+#When the user wants to go through the right door also known as the black door, this small scene will play out before sending them through it
 def Calling_Hells_Eternal_Grasp():
     print("'You decide to go through the pure black gate. May luck be with you challenger, one who tries to challenge the very labyrinth of hell.'")
     time.sleep(1)
@@ -23,12 +26,14 @@ def Calling_Hells_Eternal_Grasp():
     print("As it opens, a torrent of hot air hits you as you cover your face to protect yourself and proceed into the gate as it locks behind you.")
     Hells_Eternal_Grasp()
 
+#When the user decides to enter the black door, this is the code that will play out for the Hell door and the Hell section of the game
 def Hells_Eternal_Grasp():
     print("As you pass through the gate. You are immediately blocked by a pay wall stating you don't have access to the Heavenly Realm Expansion")
     time.sleep(6)
     print("Just kidding Just kidding. This is still a work in development so it will be added later but I wanted to say thanks for playing this small little project")
     sys.exit()
 
+#When the user is killed by administrator Xyron, this is the code that will play out and will call a function which kills the player
 def AdministratorDeath1():
     print("'The impudence.'")
     time.sleep(1)
@@ -37,7 +42,7 @@ def AdministratorDeath1():
     print("A screen suddenly appears in front of you.")
     chollenger.kill()
 
-
+#This is the scene where administrator Xyron confronts the player on how they have all this knowledge
 def Confrontation1():
     print("'Error. Breech of plausability has been detectected. Calling administrator.'")
     print("The screen that appeared glitched out as you saw a bit of light appearing before you. A crack was forming in the space above you as you.")
@@ -60,16 +65,21 @@ def Confrontation1():
     print("'Listen here, I'm currently busy dealing with the mess that Apollo caused in the Greek sector so I don't have the time to deal with this. Now explain, how the hell does a mere mortal know of secrets that only administators know of?'")
     time.sleep(3)
     print("'Like do you know how much of a mess we're in right now due to you? This is even worse than what Apollo, that drunk screw-up did. You've breeched the plausability of this prison to the point that now the higher-ups are demanding for a check of the fairness of this prison and it's trials.'")
+    #choices for how the user can respond to adminstrator Xyron
     confrontation = input()
     confrontationlist = ["talk", "stay silent", "spit", "try to break free"]
     if confrontation in confrontationlist: 
+        #if the user chooses to talk, they will have the chance to survive
         if confrontation == "talk":
             print("'Explain Now!' He demands.")
+            #if the user chooses to talk, they will have the chance to survive depending on how they respond to him
             confrontation1_2 = input()
             confrontation1_2list = ["fair?","lie"]
             if confrontation1_2 in confrontation1_2list:
+                #if the user chooses to "lie" to him, it will go to the AdministratorDeath1 function where he'll kill you
                 if confrontation1_2 == "lie":
                     AdministratorDeath1()
+                #if the user chooses to respond with "fair?"", they will criticize how he acts and he'll let them go to not get in trouble and will allow the user to continue to the crafting function 
                 if confrontation1_2 == "fair?":
                     print("'What did you say? You yell at him.")
                     print("You respond that this prison was never fair to begin withand that he has no right to talk about fairness when he literally accepts bribes from the Chinese sector and the Indian sector to make the prison harder for certain contestants you greedy bastard.")
@@ -79,20 +89,25 @@ def Confrontation1():
                     print("'Fine you win this time but the next time you get reported will be your last.'")
                     print("He walks back through the crack in space as it closes up behind him.")
                     chollenger.divine_weapon_making()
+                #if the user chooses to respond with anything else except "lie" or "fair?", it will go to the AdministratorDeath1 function where he'll kill you
                 else:
                     AdministratorDeath1()
+        #if the user chooses to respond with "stay silent", it will go to the AdministratorDeath1 function where he'll kill you
         if confrontation == "stay silent":
             AdministratorDeath1()
+        #if the user chooses to respond with "spit", it will go to the AdministratorDeath1 function where he'll kill you
         if confrontation == "spit":
             AdministratorDeath1()
+        #if the user chooses to respond with "try to break free", it will go to the AdministratorDeath1 function where he'll kill you
         if confrontation == "try to break free":
             AdministratorDeath1()
+    #if the user responds with anything other than one of the excepted responses, it will go to the AdministratorDeath1 function where he'll kill you
     else:
         AdministratorDeath1()
 
-
-
+#This is the class for the player where all the data dn functions related to them is stored
 class Challenger():
+    #This is where the data related to the player like their name, their status, and etc
     def __init__(self):
             self.name = name
             self.equipped_weapon = None
@@ -102,7 +117,8 @@ class Challenger():
             self.mana = 100
             self.possessed_divine_artifact = None
             self.divine_weapon = None
-    
+
+    #This is where the function for printing the players stats is
     def stats(self):
         print("Stats: ")
         print(f"Challenger ID: {self.name}")
@@ -113,46 +129,63 @@ class Challenger():
         print(f"Divine Treasure: {self.possessed_divine_artifact} ")
         print(f"Divine Weapon: {self.divine_weapon}")
 
+    #This is where the function that tells the code what to do when the player takes damage is
     def damage(self, amount):
             self.health -= amount
             print(f"{self.name} received {amount} damage")
             if self.health <=0:
                 self.kill()
         
+    #This is where the function that tells the code what to do when the player dies
     def kill(self):
             print(f"{self.name} has died and entered the 6 channels of reincarnation.")
+            sys.exit()
 
+    #This is where the function that tells the code what to do when the player wants to get their weapon
     def weapon(self):
+        #Telling the player to choose a weapon from the list of weapons
         weapon_chosen = input("Choose a weapon to assist you in your feeble adventure: " + str(weapon_list))
         if weapon_chosen.lower() in weapon_list:
                 self.equipped_weapon = weapon_chosen
+        #What to do if they choose a weapon or somethin outside of the list
         else:
-            print("Hey I already provided you with a list. choose from it genius")
+            print("Hey I already provided you with a list. choose from it genius.")
 
+    #This is where the function that tells the code what to do when the player wants to choose their divine artifact
     def divine_artifact(self):
+        #Tries to convince them that this isn't an option
         print("'Sorry, that isn't an option, please choose either left or right.'")
         action1_1 = input()
+        #key to move on past the first attempt
         if action1_1.lower() == "break them":
+            #Second attempt to convince the player that this isn't an option 
             print("Error")
             action1_2 = input()
+            #key to move on past the second attempt
             if action1_2.lower() == "break that which seals the truth of reality":
+                #once the player gets past both attempts, it will ask them which statue to break
                 print("'Which statue would you like to break? The left or right one? The rising angel or the fallen angel? But be warned, you can only choose one.'")
                 time.sleep(1)
                 print("A screen appears infront of you that says heavenly or demonic, which shall you choose?")
                 statue_break = input()
+                #if the user chooses heavenly, they will gain the heavenly divine artifact
                 if statue_break.lower() == "heavenly":
                     print("You walk over to the left statue of the angel with the scale and sword and with your " + self.equipped_weapon + " you strike the statue breaking it in 2")
                     time.sleep(1)
                     print("You've gained the divine artifact: Brightest Fragment of the 9th Brilliant Light, Ariel")
                     self.possessed_divine_artifact = "Brightest Fragment of the 9th Brilliant Light, Ariel"
+                #if the user chooses demonic, they will gain the demonic divine artifact
                 if statue_break.lower() == "demonic":
                     print("You walk over to the right statue of the angel crying blood who is stabbing herself and with your " + self.equipped_weapon + " you strike the statue breaking it in 2.")
                     time.sleep(1)
                     print("You've gained the divine artifact: Horn of the Incarnation of Chaos, Baphomet")
                     self.possessed_divine_artifact = "Horn of the Incarnation of Chaos, Baphomet"
 
+    #This is the code to provide the user with a god weapon by combing their divine artifact and their weapon
     def God_Weapons(self):
+        #If the user has the demonic divine artifact, it will allow them to combine it with their weapon based on which weapon they have
         if self.possessed_divine_artifact == "Horn of the Incarnation of Chaos, Baphomet":
+            #if the user has a spear, it provides them with 3 option
             if self.equipped_weapon == "spear":
                 print("You're 3 choices are: ")
                 print("1) Point of Decemation")
@@ -163,6 +196,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+            #if the user has a magic staff, it provides them with 3 option
             if self.equipped_weapon == "magic staff":
                 print("You're 3 choices are: ")
                 print("1) Eternal Fire Staff")
@@ -173,6 +207,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+            #if the user has a sword, it provides them with 3 option
             if self.equipped_weapon == "sword":
                 print("You're 3 choices are: ")
                 print("1) Soul Splitting Blade")
@@ -183,6 +218,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+            #if the user has a bow and arrow, it provides them with 3 option
             if self.equipped_weapon == "bow and arrow ":
                 print("You're 3 choices are: ")
                 print("1) Soul Chasing Arrow")
@@ -193,6 +229,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+            #if the user has a dagger, it provides them with 3 option
             if self.equipped_weapon == "dagger":
                 print("You're 3 choices are: ")
                 print("1) Sickles of Death")
@@ -203,7 +240,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
-
+            #if the user has a shield, it provides them with 3 option
             if self.equipped_weapon == "shield":
                 print("You're 3 choices are: ")
                 print("1) Hells Barricade")
@@ -214,7 +251,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
-
+            #if the user has a gauntlets, it provides them with 3 option
             if self.equipped_weapon == "gauntlets":
                 print("You're 3 choices are: ")
                 print("1) Soul Grasping Fist")
@@ -225,7 +262,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
-
+            #if the user has an axe, it provides them with 3 option
             if self.equipped_weapon == "axe":
                 print("You're 3 choices are: ")
                 print("1) Executioner of Life")
@@ -237,7 +274,9 @@ class Challenger():
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
 
+        #If the user has the heavenly divine artifact, it will allow them to combine it with their weapon based on which weapon they have
         if self.possessed_divine_artifact == "Brightest Fragment of the 9th Brilliant Light, Ariel":
+            #if the user has a spear, it provides them with 3 option
             if self.equipped_weapon == "spear":
                 print("You're 3 choices are: ")
                 print("1) Holy Light Gods Spear")
@@ -248,7 +287,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
-
+            #if the user has a magic staff, it provides them with 3 option
             if self.equipped_weapon == "magic staff":
                 print("You're 3 choices are: ")
                 print("1) Staff of the Constellation")
@@ -259,7 +298,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
-
+            #if the user has a sword, it provides them with 3 option
             if self.equipped_weapon == "sword":
                 print("You're 3 choices are: ")
                 print("1) Final Cut")
@@ -269,8 +308,8 @@ class Challenger():
                 God_weapon_list = ["final cut", "severance of life and death", "dawn of judgement"]
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
-                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + "."):
-
+                    print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
+            #if the user has a bow and arrow, it provides them with 3 option
             if self.equipped_weapon == "bow and arrow":
                 print("You're 3 choices are: ")
                 print("1) Spirit Whisperer")
@@ -281,7 +320,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
-            
+            #if the user has a dagger, it provides them with 3 option
             if self.equipped_weapon == "dagger":
                 print("You're 3 choices are: ")
                 print("1) Fragments of Light")
@@ -292,7 +331,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
-
+            #if the user has a shield, it provides them with 3 option
             if self.equipped_weapon == "shield":
                 print("You're 3 choices are: ")
                 print("1) Wall of Light")
@@ -303,7 +342,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
-
+            #if the user has a gauntlet, it provides them with 3 option
             if self.equipped_weapon == "gauntlets":
                 print("You're 3 choices are: ")
                 print("1) Divine Retribution")
@@ -314,7 +353,7 @@ class Challenger():
                 if God_weapon.lower() in God_weapon_list:
                     self.divine_weapon = God_weapon
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
-
+            #if the user has an axe, it provides them with 3 option
             if self.equipped_weapon == "axe":
                 print("You're 3 choices are: ")
                 print("1) Universal Severance")
@@ -327,7 +366,7 @@ class Challenger():
                     print("You've chosen: " + God_weapon + " for your final crafted item. You now possess the " + God_weapon + ".")
 
             
-
+    #This is the code to take the user to the crafting system to craft their weapon by providing ingredients
     def divine_weapon_making(self):
         print("A screen appears infront of you.")
         time.sleep(1)
@@ -338,39 +377,87 @@ class Challenger():
         print("'Welcome to the forge of the world, also known as the crafting system, as you are the first of the 563rd generation to open the crafting system you get a prize: you're first try is free!'")
         time.sleep(7)
         print("'Now what what ingredients would you like to use?'")
+        #This code asks the user for their first ingredient
         ingredient1list = [self.possessed_divine_artifact, self.equipped_weapon]
         print("Currently possessed ingredients:" + str(ingredient1list) + ". Please choose one these items or you could leave if you want.")
         ingredient1 = input()
+        #if their first ingredient is their divine artifact
         if ingredient1 == self.possessed_divine_artifact:
             print("Ingredient 1: " + self.possessed_divine_artifact + " has been used. Please choose ingredient 2.")
             print("Ingredients left: " + self.equipped_weapon)
             ingredient2 = input()
+            #The code for their second ingredient which is their weapon
             if ingredient2.lower() == self.equipped_weapon:
                 print("you have chosen: " + self.equipped_weapon + " as you 2nd ingredient. Combining " + self.equipped_weapon + " with " + self.possessed_divine_artifact + ". Please wait dear contestant.")
                 time.sleep(7)
                 print("Done. Your ingredients have been combined. You have 3 choices to choose from for your final crafted item.")
+                #it takes them to the section where they create their god weapon
                 self.God_Weapons()
-                ingredient2 = input()
+                print("Thank you for using the crafting system, returning contestant to prison. Goodbye.")
+                time.sleep(5)
+                print("You see a beam of light hit you and cover your eyes. when you open your eyes, you're back where you started.")
+                print("The same screen appears infront of you: 'Choose left or right.'")
+                #after they make their god weapon, it then asks them for their third choice
+                action3 = input()
+                action3list = ["left","right"]
+                if action3.lower() in action3list:
+                    #if the user chooses to go left, the code will go to the introduction scene the heaven section of the game
+                    if action3.lower() == "left":
+                        Calling_Heavens_Will()
+                    #if the user chooses to go right, the code will go to the introduction scene the hell section of the game
+                    if action3.lower() == "right":
+                        Calling_Hells_Eternal_Grasp()
+                #if they choose an option outside of any of the provided options, it will keep asking them to choose another option thats valid
+                else:
+                    print("'option does not exist.")
+                    print("please choose a valid option: left or right.")
+                    action3 = input()
+        #if their first ingredient is their weapon
         if ingredient1.lower() == self.equipped_weapon:
             print("Ingredient 1: " + self.equipped_weapon + " has been used. Please choose ingredient 2.")
             print("Ingredients left: " + self.possessed_divine_artifact)
             ingredient2 = input()
+            #The code for their second ingredient which is their divine artifact
             if ingredient2 == self.possessed_divine_artifact:
                 print("you have chosen: " + self.possessed_divine_artifact + " as you 2nd ingredient. Combining " + self.possessed_divine_artifact + " with " + self.equipped_weapon + ". Please wait dear contestant.")
                 time.sleep(7)
                 print("Done. Your ingredients have been combined. You have 3 choices to choose from for your final crafted item.")
+                #it takes them to the section where they create their god weapon
                 self.God_Weapons()
-                ingredient2 = input()
+                print("Thank you for using the crafting system, returning contestant to prison. Goodbye.")
+                time.sleep(5)
+                print("You see a beam of light hit you and cover your eyes. when you open your eyes, you're back where you started.")
+                print("The same screen appears infront of you: 'Choose left or right.'")
+                #after they make their god weapon, it then asks them for their third choice
+                action3 = input()
+                action3list = ["left","right"]
+                if action3.lower() in action3list:
+                    #if the player chooses to go left, the code will go to the introduction scene the heaven section of the game
+                    if action3.lower() == "left":
+                        Calling_Heavens_Will()
+                    #if the player chooses to go right, the code will go to the introduction scene the hell section of the game
+                    if action3.lower() == "right":
+                        Calling_Hells_Eternal_Grasp()
+                #if they choose an option outside of any of the provided options, it will keep asking them to choose another option thats valid
+                else:
+                    print("'option does not exist.")
+                    print("please choose a valid option: left or right.")
+                    action3 = input()
+                        
+        #if the player chooses to leave the crafting system, than it will take them back to choosing another second option
         if ingredient1 == "leave":
             print("Exiting crafting system and returning back to the prison.")
             print("A screen appears infront of you: 'Choose left or right.'")
             action2 = input()
             action2list = ["left","right"]
             if action2.lower() in action2list:
+                #if the player chooses to go left, the code will go to the introduction scene the heaven section of the game
                 if action2.lower() == "left":
                     Calling_Heavens_Will()
+                #if the player chooses to go right, the code will go to the introduction scene the hell section of the game
                 if action2.lower() == "right":
                     Calling_Hells_Eternal_Grasp()
+        #if they choose an ingredient outside of any of the provided ingrtedients, it will keep asking them to choose another ingredient thats valid
         else:
             print("That is not a valid option, please choose from the list provided")
             ingredient1 = input()
@@ -456,6 +543,7 @@ if __name__ == "__main__":
             weapon_list = ["spear","magic staff","sword","bow and arrow","dagger","shield","gauntlets","axe"]
             chollenger = Challenger()
             chollenger.weapon()
+            #This is where the code asks the user where they want to go next
             print("A screen appears infront of you.")
             time.sleep(1)
             print("'You may now choose to go through the left door or right door.'")
@@ -464,27 +552,36 @@ if __name__ == "__main__":
             action1 = input()
             action1list = ["left","right","break the doors at the edge of the universe to unveil that which has been sealed away"]
             if action1.lower() in action1list:
+                #if the user chooses to go left, the code will go to the introduction scene the hell section of the game
                 if action1.lower() == "left":
                     Calling_Heavens_Will()
+                #if the user chooses to go right, the code will go to the introduction scene the hell section of the game
                 if action1.lower() == "right":
                     Calling_Hells_Eternal_Grasp()
+                #if the user chooses the special option to break, the code will lead them to the special scene of the divine artifact
                 if action1.lower() == "break the doors at the edge of the universe to unveil that which has been sealed away":
                     chollenger.divine_artifact()
+                    #The code will then ask them where they want to go next
                     print("The same screen appears infront of you: 'Choose left or right.'")
                     action2 = input()
                     action2list = ["left","right","combine the 3 realms to shatter them and shatter them to combine them"]
                     if action2.lower() in action2list:
+                        #if the user chooses to go left, the code will go to the introduction scene the heaven section of the game
                         if action2.lower() == "left":
                             Calling_Heavens_Will()
+                        #if the user chooses to go right, the code will go to the introduction scene the hell section of the game
                         if action2.lower() == "right":
                             Calling_Hells_Eternal_Grasp()
+                        #if they choose this special option to combine, it will confirm they have a divine artifact
                         if action2.lower() == "combine the 3 realms to shatter them and shatter them to combine them":
                             if chollenger.possessed_divine_artifact.lower() == "Horn of the Incarnation of Chaos, Baphomet" or "Brightest Fragment of the 9th Brilliant Light, Ariel":
                                 Confrontation1()
+                            #if they don't it will tell them this isn't an option and ask them to choose another action
                             else:
                                 print("'option does not exist.")
                                 print("please choose a valid option: left or right.")
-                                action1 = input()
+                                action2 = input()
+            #if the user chooses something outside the list of actions, it will keep asking them for them to choose one of the actions provided to them
             while action1.lower() not in action1list:
                 print("'Please choose one of the options provided to you.'")
                 action1 = input()
