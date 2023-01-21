@@ -12,14 +12,14 @@ This game is just a fun game for myself to play and to show to my friends and fa
 ## Something New I learned:
 Something new that I learned from this project is how to use the time.sleep function which allows me to delay certain pieces of code to appear after a wait like 5 seconds to help space out my code when I presented text to the player so that they don't get overwhelmed which was done using time.sleep() as by delaying the appearance of certain parts of code, it made it more easy to digest for the player who had to read it all by providing them with hime to read the text on the screen. I was also helped by my coding instructor, Mr. Bowman, who helped me understand classes and their function in code and how they help make code easier to read and simpler to understand by placing all the code that relates to the player in one place for easy access in 1 place.
 ##### Examples:
-###### Example of time.sleep():
+##### Example of time.sleep():
 <img width="1268" alt="Screenshot 2023-01-21 at 2 41 03 AM" src="https://user-images.githubusercontent.com/97945763/213824211-fd154a48-04e0-4620-9b39-f18557798085.png">
 Here's an example of where I used time.sleep() to provide the player where time.sleep() to be able to read the introduction scene which described to them where they were so that they wouldn't miss anything important that they had to know
-###### Example of Class and Objects:
+##### Example of Class and Objects:
 ![Screenshot 2023-01-21 at 5 00 34 AM](https://user-images.githubusercontent.com/97945763/213836689-e985d432-6902-4e22-9bb2-a93e34dbaf69.png)
 Here's an example of my class and objects in the class where I placed all the functions that relate to the player in the class so that the functions and code are easy to find throughout my whole code.
 
-##Solving a Problem:
+## Solving a Problem:
 One example of me solving a problem in my code is when I was trying to implement my class and objects into my main function and code as I had to assign the class to a variable to use the objects in it but what I did was that I made that variable for the class twice, one for when the player chose the weapon and once more when the player chose their divine artifact but the problem with that was that because I made that variable twice(meaning I had the same line of code attaching the class to a variable in both cases), for some reason all the players data stored in the class was deleted which confused me till I realized that the reason all the players data in the class like their name, weapon, and etc. was beign deleted was because I was making a variable twice for the class to attach it to my code, When I made the variable a second variable, it was reseting all the players data when I made it again meaning all I had to do was erase the second time I made a variable for it and then my code worked again as the class and objects were implemented and the players data stopped being reset.
 <img width="1024" alt="Screenshot 2023-01-21 at 5 05 17 AM" src="https://user-images.githubusercontent.com/97945763/213837740-d60b46cc-8683-4518-86bb-3f9dadc92322.png">
 
@@ -27,7 +27,7 @@ One example of me solving a problem in my code is when I was trying to implement
 Data abstraction in my code can be seen when certain data is stored like in a variable or array(when there were multiple "correct" choices or possible choices) where and where that data is then retrieved later on by different code statements like conditional statements. This can be seen when I created arrays in my code like when I made an array with all the possible weapon choices and if the weapon the player chose was in that array, than whatever weapon they chose would be set as their weapon and stored in the player class under the object of their equipped weapon but this data isn't just left there but it's then used later on and retrieved by conditional statements like when the player is crafting a new item by combining their weapon and divine artifact where if statements check what weapon they have to list the possible crafted items they can make. If I didn't use data abstraction in my code/program, it wouldn't work because the players weapon wouldn't be stored anywhere meaning that no matter what weapon they chose, it wouldn't matter because the code would not store it anywhere meaning that it wouldn't be able to check which weapon they have and wouldn't be able to list specific crafted weapons based on their weapons as the weapon they chose isn't stored anywhere. Using things like arrays also helped my code be less repetitive as I didn't have to write the same code over and over for each weapn to be set as the players equipped weapon but I could just write the same code once for the players weapon choice to be set as their weapon and have it apply to all the chosen weapons in the array.
 ##### Where the array with the weapon choices are:
 <img width="1300" alt="Screenshot 2023-01-21 at 5 27 51 AM" src="https://user-images.githubusercontent.com/97945763/213839921-212a6f99-55df-4154-88e7-19dd5a78f1af.png">
-##### Where the weapon they chose is set as their weapon
+##### Where the weapon they chose is set as their weapon:
 <img width="1088" alt="Screenshot 2023-01-21 at 5 28 18 AM" src="https://user-images.githubusercontent.com/97945763/213839927-a6e6aab6-d5e9-4562-91f1-b7c6e6fe1ccd.png">
 
 ## Procedural Abstraction:
