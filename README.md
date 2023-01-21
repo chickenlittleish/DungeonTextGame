@@ -9,7 +9,7 @@ This project is a fantasy dungeon exploration text based game made in python. Th
 ## Purpose:
 This game is just a fun game for myself to play and to show to my friends and family and for them to play it. It's also for anyone who wants to play a fun quick game online and who wants to play a fun and small fatasy game that I will try to update with more features and levels. the reason I made this project was because I wanted to improve my general ability and familiarity with Python meaning I wanted to imrpove my ability to problem solve and just my general understanding of Python like when to use certain code.
 
-##Something New I learned:
+## Something New I learned:
 Something new that I learned from this project is how to use the time.sleep function which allows me to delay certain pieces of code to appear after a wait like 5 seconds to help space out my code when I presented text to the player so that they don't get overwhelmed which was done using time.sleep() as by delaying the appearance of certain parts of code, it made it more easy to digest for the player who had to read it all by providing them with hime to read the text on the screen. I was also helped by my coding instructor, Mr. Bowman, who helped me understand classes and their function in code and how they help make code easier to read and simpler to understand by placing all the code that relates to the player in one place for easy access in 1 place.
 ##### Examples:
 ###### Example of time.sleep():
