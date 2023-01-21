@@ -1,5 +1,8 @@
 # DungeonTextGame
 
+### Video of Code Running:
+https://drive.google.com/file/d/11sI5JmzCxGBWQswa5orF-q3LjHwl2yOA/view?usp=share_link
+
 ## Function:
 This project is a fantasy dungeon exploration text based game made in python. The game has the player trying to progress through this dungeon whihc is meant to be a prison for the player. The code provides the player with many choices to choose from like which door do they want to go through or which weapon they want with some hidden easter eggs like when certain names are put into the game or when certain commands are issued at certain areas of the game. To find these secret commands and easter eggs, it would be near impossible for a normal person meaning the players have to check the actual source code of the game to find out what they are because there were many games I played where quests or areas were only discovered by looking at the games code and I looked that aspect a lot of it being completely hidden and only being revealed only to the most dedicated players who even go as far as checking the code of the game so I wanted to put that in my game. But at its core, this game is a choose your own adventure sort of text game where each choice the player makes will impact the story and change the game so the game will have many paths based on how you play the game so try to discover them all ;)
 
