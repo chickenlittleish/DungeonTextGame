@@ -65,7 +65,7 @@ Sequencing can be seen in my code as the way the computer reads the code is from
 <img width="811" alt="Screenshot 2023-01-21 at 5 51 47 AM" src="https://user-images.githubusercontent.com/97945763/213840627-a3406b3e-f1cf-4e92-a06a-33dbcce2f7e8.png">
 
 #### Selection:
-Selection can be seen repeatedly throughout my code like in while loops and if statements, which ar ejust conditional statements, as those statements have to be selected if the condition for them is met. This can be seen with my if statements like when the player's name is asked for and set, there are if statements which are called based on the players name if the players name is the same as the one stated in the if statements condition which is like specific names. and if the players name doesn't fit any of those conditions, than the code doesn't call that if statement and just skips it as the condition isn't met to call that code.
+Selection can be seen repeatedly throughout my code like in while loops and if statements, which are just conditional statements, as those statements have to be selected if the condition for them is met. This can be seen with my if statements like when the player's name is asked for and set, there are if statements which are called based on the players name if the players name is the same as the one stated in the if statements condition which is like specific names. and if the players name doesn't fit any of those conditions, than the code doesn't call that if statement and just skips it as the condition isn't met to call that code.
 
 #### If statements based off of name:
 <img width="1306" alt="Screenshot 2023-01-21 at 5 59 41 AM" src="https://user-images.githubusercontent.com/97945763/213840839-aa013ec6-fd93-4113-aa3f-573a15d33107.png">
