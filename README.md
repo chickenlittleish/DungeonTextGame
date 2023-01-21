@@ -25,9 +25,9 @@ One example of me solving a problem in my code is when I was trying to implement
 
 ## Data Abstraction:
 Data abstraction in my code can be seen when certain data is stored like in a variable or array(when there were multiple "correct" choices or possible choices) where and where that data is then retrieved later on by different code statements like conditional statements. This can be seen when I created arrays in my code like when I made an array with all the possible weapon choices and if the weapon the player chose was in that array, than whatever weapon they chose would be set as their weapon and stored in the player class under the object of their equipped weapon but this data isn't just left there but it's then used later on and retrieved by conditional statements like when the player is crafting a new item by combining their weapon and divine artifact where if statements check what weapon they have to list the possible crafted items they can make. If I didn't use data abstraction in my code/program, it wouldn't work because the players weapon wouldn't be stored anywhere meaning that no matter what weapon they chose, it wouldn't matter because the code would not store it anywhere meaning that it wouldn't be able to check which weapon they have and wouldn't be able to list specific crafted weapons based on their weapons as the weapon they chose isn't stored anywhere. Using things like arrays also helped my code be less repetitive as I didn't have to write the same code over and over for each weapn to be set as the players equipped weapon but I could just write the same code once for the players weapon choice to be set as their weapon and have it apply to all the chosen weapons in the array.
-##### Where the array with the weapon choices are:
+#### Where the array with the weapon choices are:
 <img width="1300" alt="Screenshot 2023-01-21 at 5 27 51 AM" src="https://user-images.githubusercontent.com/97945763/213839921-212a6f99-55df-4154-88e7-19dd5a78f1af.png">
-##### Where the weapon they chose is set as their weapon:
+#### Where the weapon they chose is set as their weapon:
 <img width="1088" alt="Screenshot 2023-01-21 at 5 28 18 AM" src="https://user-images.githubusercontent.com/97945763/213839927-a6e6aab6-d5e9-4562-91f1-b7c6e6fe1ccd.png">
 
 ## Procedural Abstraction:
